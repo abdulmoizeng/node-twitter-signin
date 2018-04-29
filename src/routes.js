@@ -33,7 +33,7 @@ function registerRoutes(userHandler, callback_render) {
                         }
                         if (callback_render) {
                             res.status(200);
-                            callback_render(res);
+                            callback_render(user, token, res);
                         } else {
                             httpUtils.sendSuccessResponse(res, {});
                         }
